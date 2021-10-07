@@ -4,14 +4,14 @@ import com.vnpay.learn_springboot.entities.TestEntity;
 import com.vnpay.learn_springboot.repository.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class HomeController {
@@ -44,6 +44,17 @@ public class HomeController {
         html += "</ul></body></html>";
 
         return html;
+    }
+
+    @GetMapping("/hello/{name}")
+    @ResponseBody
+    public String helloName(@PathVariable("name") String name) {
+        return "Hello " + name;
+    }
+
+    @GetMapping("/hello2/{name}")
+    public ResponseEntity<String> hello2Name(@PathVariable("name") String name) {
+        return ResponseEntity.status(HttpStatus.OK).body("Hello 2: " + name);
     }
 
     @RequestMapping("/login")

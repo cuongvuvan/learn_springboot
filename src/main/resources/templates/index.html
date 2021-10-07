@@ -5,12 +5,29 @@
     <title>Learn Spring boot</title>
 </head>
 <body>
-    <h1>Hello Spring boot</h1>
-    <h2><a href="/login">Login</a></h2>
+<h1>Hello Spring boot</h1>
+<h2><a href="/login">Login</a></h2>
 
-    <ul>
-        <li><a href="/getAllTest">Get all Test entities</a></li>
-    </ul>
+<ul>
+    <li><a href="/getAllTest">Get all Test entities</a></li>
+    <li><a href="/hello/VNPAY">/hello/{name}: GetMapping, name = VNPAY</a></li>
+    <li><a href="/hello2/VNPAY">/hello2/{name}: GetMapping, name = VNPAY</a></li>
+</ul>
 
+<h2>@RequestParam</h2>
+<ul>
+    <li><a href="/requestParam?id=1">/requestParam?id=1</a> => Normal</li>
+    <li><a href="/requestParamV2?id=2&name=VNPAY">/requestParamV2?id=2&name=VNPAY</a> => Parameter variable</li>
+    <li><a href="/requestParamV3?id=3&name=PosTeam">/requestParamV3?id=3&name=PosTeam</a> => Map parameter</li>
+    <li><a href="/requestParamV4?id=4&name=PosTeam">/requestParamV4?id=4&name=PosTeam</a> => Optional parameter</li>
+    <li><a href="/requestParamV5?id=5&key=A,B,C">/requestParamV5?id=5&key=A,B,C</a> => List parameter</li>
+</ul>
+
+<h2>@RequestParam</h2>
+<ul>
+    <li><a href="/demoPathParamV1/user/1">/demoPathParamV1/user/1</a> => Normal</li>
+    <li><a href="/demoPathParamV2/user/1/name/PosTes">/demoPathParamV2/user/1/name/PosTes</a> => Map parameter</li>
+<!--    <li><a href="/demoPathParamV3/key=A,B,C">/demoPathParamV3/key=A,B,C</a> => List parameter</li>-->
+</ul>
 </body>
 </html>
