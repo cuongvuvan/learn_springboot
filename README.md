@@ -1,35 +1,40 @@
 # learn_springboot
 
-## 1. Mô hình
+## 1. Lombok
+Chi tiết: [Lombok](/doc/lombok.md)
+
+## 2. Mô hình
 
 Flow request/response trong spring MVC
-![N|Spring flow](https://images.viblo.asia/full/68d13e98-8714-4dd9-ae27-641ee729ab20.png)
+![N|Spring flow](./doc/resources/images/spring_overview.png)
+https://images.viblo.asia/full/68d13e98-8714-4dd9-ae27-641ee729ab20.png
 
 Các layer và data access level trong framework
-![N|](https://images.viblo.asia/full/0b2971bd-7098-4652-a677-c61aea36e032.png)
+![Spring access level](./doc/resources/images/spring_layer.png)
+https://images.viblo.asia/full/0b2971bd-7098-4652-a677-c61aea36e032.png
 
-## 2. Controller
+## 3. Controller
 
 Trong mô hình MVC, controller là nơi nhận request từ người dùng, xử lý request, xây dựng dữ liệu cho view (model) và
 chọn view để trả lại kết quả của cho người dùng.
 <br/>
 Chi tiết: [Controller Document](/doc/controller.md)
 
-## 3. HttpRequest & HttpResponse
+## 4. HttpRequest & HttpResponse
 
 Chi tiết: [Document](/doc/http_request_response.md)
 
-## 4. Mapping annotation
+## 5. Mapping annotation
 
 - @GetMapping, @DeleteMapping, @PostMapping, @PutMapping, ...
 - @RequestMapping(value = "/users", method = RequestMethod.GET)
 - @RequestMapping("/users") public class UserController {}
 
-## 5. Nhận request data trong Controller
+## 6. Nhận request data trong Controller
 
 Chi tiết: [Document](/doc/handle_request.md)
 
-## 6. Trả về response từ controller
+## 7. Trả về response từ controller
 
 Chi tiết: [Document](/doc/handle_response.md)
 
